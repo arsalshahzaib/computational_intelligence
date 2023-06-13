@@ -60,6 +60,6 @@ grading_scale = {
 
 gpa = grading_scale.get(final_grade_value, 0.0)
 
-# Print the Final Grade and GPA
+# Print the final grade and GPA
 print("Final Grade:", final_grade_value)
 print("GPA:", gpa)
