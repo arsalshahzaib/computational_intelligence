@@ -2,13 +2,13 @@ import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
 
-# Define fuzzy variables and membership functions
+# fuzzy variables
 midterm_exam = ctrl.Antecedent(np.arange(0, 101, 1), 'Midterm Exam')
 assignments_quizzes = ctrl.Antecedent(np.arange(0, 101, 1), 'Assignments and Quizzes')
 final_exam = ctrl.Antecedent(np.arange(0, 101, 1), 'Final Exam')
 final_grade = ctrl.Consequent(np.arange(0, 101, 1), 'Final Grade')
 
-# Define membership functions for each fuzzy variable
+# membership functions for each fuzzy variable
 midterm_exam['Low'] = fuzz.trimf(midterm_exam.universe, [0, 0, 50])
 midterm_exam['Medium'] = fuzz.trimf(midterm_exam.universe, [0, 50, 100])
 midterm_exam['High'] = fuzz.trimf(midterm_exam.universe, [50, 100, 100])
